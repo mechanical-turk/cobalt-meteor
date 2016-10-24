@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/keremkazan/cobalt-starter/issues"
   },
-  "homepage": "https://github.com/keremkazan/cobalt-starter#readme"
+  "homepage": "https://github.com/keremkazan/cobalt-starter#readme",
+  "dependencies": {
+    "cobalt-base": "^1.0.0"
+  }
 }

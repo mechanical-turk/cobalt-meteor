@@ -1,0 +1,19 @@
+{
+  "name": "cobalt-starter",
+  "version": "1.0.0",
+  "description": "Boilerplate code to start a cobalt scaffolder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keremkazan/cobalt-starter.git"
+  },
+  "author": "Kerem Kazan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keremkazan/cobalt-starter/issues"
+  },
+  "homepage": "https://github.com/keremkazan/cobalt-starter#readme"
+}

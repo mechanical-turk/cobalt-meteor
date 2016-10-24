@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/keremkazan/cobalt-starter#readme",
   "dependencies": {
-    "cobalt-base": "^1.0.0"
+    "cobalt-base": "*"
   }
 }

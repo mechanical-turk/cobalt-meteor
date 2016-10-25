@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/keremkazan/cobalt-starter/issues"
   },
+  "bin": {
+    "starter": "./index.js"
+  },
   "homepage": "https://github.com/keremkazan/cobalt-starter#readme",
   "dependencies": {
     "cobalt-base": "*"

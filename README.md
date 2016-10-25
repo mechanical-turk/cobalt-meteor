@@ -3,7 +3,7 @@ Boilerplate code to start a cobalt scaffolder
 
 - Clone this repository: `git clone git@github.com:keremkazan/cobalt-starter.git`
 - Get into the project folder: `cd cobalt-starter` and run `npm install`.
-- Get out of the project folder: `..cd` and create a testing folder: `mkdir test-cobalt`
+- Get out of the project folder: `..cd`, create a test folder: `mkdir test-cobalt`, and get into it: `cd test-cobalt`
 - run: `node ../cobalt-starter/index.js generate example myFileName`
 - This will create two example files:
  - `test-cobalt/examples/e1_my_file_name.txt`

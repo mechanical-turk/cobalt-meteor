@@ -1,24 +1,24 @@
 {
-  "name": "cobalt-starter",
+  "name": "cobalt-meteor",
   "version": "1.0.0",
-  "description": "Boilerplate code to start a cobalt scaffolder",
+  "description": "Scaffolding tool for meteor 1.4 and up",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/keremkazan/cobalt-starter.git"
+    "url": "git+https://github.com/keremkazan/cobalt-meteor.git"
   },
   "author": "Kerem Kazan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/keremkazan/cobalt-starter/issues"
+    "url": "https://github.com/keremkazan/cobalt-meteor/issues"
   },
   "bin": {
-    "starter": "./index.js"
+    "cobalt": "./index.js"
   },
-  "homepage": "https://github.com/keremkazan/cobalt-starter#readme",
+  "homepage": "https://github.com/keremkazan/cobalt-meteor#readme",
   "dependencies": {
     "cobalt-base": "*",
     "corrected-names": "*"

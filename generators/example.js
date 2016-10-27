@@ -1,7 +1,7 @@
 module.exports = (options) => {
   return [
     {
-      filename: `e1_${options.name.dashedName}.txt`,
+      filename: `e1_${options.argv[0].dashedName}.txt`,
       parent: 'examples',
       templateName: 'example.one',
       templateData: {
@@ -10,7 +10,7 @@ module.exports = (options) => {
       },
     },
     {
-      filename: `e2_${options.name.dashedName}.txt`,
+      filename: `e2_${options.argv[0].dashedName}.txt`,
       parent: 'examples',
       templateName: 'example.two',
       templateData: {

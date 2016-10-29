@@ -13,6 +13,7 @@ config.OPTION_DEFINITIONS.push(
   { name: 'contained', type: Boolean },
   { name: 'navbar', type: String },
   { name: 'action', type: String },
+  { name: 'actions', type: String, multiple: true },
   { name: 'css', type: String, defaultValue: 'less'}
 );
 

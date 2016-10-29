@@ -24,4 +24,6 @@ class <%= pascalCaseName %> extends React.Component {
 
 };
 
-export default <%= pascalCaseName %>;
+export default createContainer(() => {
+  return {};
+}, <%= pascalCaseName %>);

@@ -4,13 +4,15 @@ function getComponent(options) {
   const name = getCorrectedNames(options.argv[0]);
   const parent = `imports/ui/Components`;
   const filename = `${name.pascalCaseName}.jsx`;
-  const componentPath = `${parent}/${filename}`
+  const componentPath = `${parent}/${filename}`;
   return {
     filename,
     parent,
-    templateName: options.stateless ?
-      `component.stateless` :
-      `component.stateful`,
+    templateName: options.contained ?
+      `component.contained` :
+      options.stateless ?
+        `component.stateless` :
+        `component.stateful`,
     templateData: {
       componentPath,
       pascalCaseName: name.pascalCaseName,

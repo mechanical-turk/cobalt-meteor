@@ -4,7 +4,7 @@ function getComponent(options) {
   const name = getCorrectedNames(options.argv[0]);
   const layoutName = getCorrectedNames(`${name.dashedName}-layout`);
   const parent = 'imports/ui/Layouts';
-  const filename = `${name.pascalCaseName}.jsx`;
+  const filename = `${layoutName.pascalCaseName}.jsx`;
   const layoutPath = `${parent}/${filename}`;
   const navbarPure = options.navbar ?
     options.navbar :
@@ -16,7 +16,7 @@ function getComponent(options) {
     parent,
     templateName: 'component.layout',
     templateData: {
-      pascalCaseName: name.pascalCaseName,
+      pascalCaseName: layoutName.pascalCaseName,
       cssClass: layoutName.dashedName,
       navbar: navbarPascalCase,
     },

@@ -1,11 +1,12 @@
-const _ = require('lodash')
+const _ = require('lodash');
 
 module.exports = (options, generate) => {
   const argv = options.argv;
+  const actions = options.actions;
   const controllerName = argv[0];
   const css = options.css;
-  return _.flatten(
-    options.actions.map((action) => {
+  const pages = _.flatten(
+    actions.map((action) => {
       return generate.page({
         argv,
         css,
@@ -13,4 +14,9 @@ module.exports = (options, generate) => {
       });
     })
   );
+  const routes = generate.route({
+    argv,
+    actions,
+  });
+  return pages.concat(routes);
 };

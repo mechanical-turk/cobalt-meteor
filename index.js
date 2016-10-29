@@ -11,6 +11,8 @@ config.GENERATORS_DIR = path.join(__dirname, 'generators');
 config.OPTION_DEFINITIONS.push(
   { name: 'stateless', type: Boolean },
   { name: 'contained', type: Boolean },
+  { name: 'navbar', type: String },
+  { name: 'action', type: String },
   { name: 'css', type: String, defaultValue: 'less'}
 );
 

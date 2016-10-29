@@ -4,12 +4,12 @@ function getComponent(options) {
   const name = getCorrectedNames(options.argv[0]);
   const navbarName = getCorrectedNames(`${name.dashedName}-navbar`);
   return {
-    filename: `${name.pascalCaseName}.jsx`,
+    filename: `${navbarName.pascalCaseName}.jsx`,
     parent: `imports/ui/Navbars`,
     templateName: `component.navbar`,
     templateData: {
-      pascalCaseName: name.pascalCaseName,
-      cssClass: navbarName,
+      pascalCaseName: navbarName.pascalCaseName,
+      cssClass: navbarName.dashedName,
       projectName: options.projectName,
     },
   };

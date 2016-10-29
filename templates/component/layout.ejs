@@ -1,0 +1,17 @@
+import React, { PropTypes } from 'react';
+import <%= navbar %> from '../Navbars/<%= navbar %>.jsx';
+
+class <%= pascalCaseName %> extends React.Component {
+  render () {
+    return (
+      <div>
+        <<%= navbar %>/>
+          <div className="<%= cssClass %>">
+            {this.props.content}
+          </div>
+      </div>
+    );
+  }
+}
+
+export default <%= pascalCaseName %>;

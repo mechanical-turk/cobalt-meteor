@@ -11,10 +11,13 @@ config.GENERATORS_DIR = path.join(__dirname, 'generators');
 config.OPTION_DEFINITIONS.push(
   { name: 'stateless', type: Boolean },
   { name: 'contained', type: Boolean },
+  { name: 'loginButtons', type: Boolean },
   { name: 'navbar', type: String },
   { name: 'action', type: String },
   { name: 'prefix', type: String },
   { name: 'layout', type: String },
+  { name: 'render', type: String },
+  { name: 'wrappedName', type: String },
   { name: 'actions', type: String, multiple: true },
   { name: 'css', type: String, defaultValue: 'less'}
 );

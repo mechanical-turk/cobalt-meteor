@@ -1,4 +1,7 @@
 import React, { PropTypes } from 'react'
+<% if (loginButtons) { %>
+import LoginButtons from '../Components/LoginButtonsWrapper'
+<% } %>
 
 class <%= pascalCaseName %> extends React.Component {
   render () {
@@ -23,6 +26,11 @@ class <%= pascalCaseName %> extends React.Component {
               <li><a href="#">Page 2</a></li>
               <li><a href="#">Page 3</a></li>
             </ul>
+            <% if (loginButtons) { %>
+            <ul className="nav navbar-nav navbar-right">
+              <LoginButtons />
+            </ul>
+            <% } %>
           </div>
         </div>
       </nav>

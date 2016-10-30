@@ -11,6 +11,7 @@ function getComponent(options) {
       pascalCaseName: navbarName.pascalCaseName,
       cssClass: navbarName.dashedName,
       projectName: options.projectName,
+      loginButtons: options.loginButtons,
     },
   };
 }

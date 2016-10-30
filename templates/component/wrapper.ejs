@@ -1,0 +1,21 @@
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { Template } from 'meteor/templating';
+import { Blaze } from 'meteor/blaze';
+
+export default class <%= wrapperName %> extends Component {
+  componentDidMount() {
+    this.view = Blaze.render(
+      Template.<%= wrappedName %>,
+      ReactDOM.findDOMNode(this.refs.<%= ref %>)
+    );
+  }
+
+  componentWillUnmount() {
+    Blaze.remove(this.view);
+  }
+
+  render() {
+    return <%- render %>;
+  }
+}

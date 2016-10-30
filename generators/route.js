@@ -5,8 +5,8 @@ const path = require('path');
 module.exports = (options) => {
   const argv = options.argv;
   const name = getCorrectedNames(argv[0]);
-  const layoutName = options.layoutName ?
-    getCorrectedNames(options.layoutName) :
+  const layoutName = options.layout ?
+    getCorrectedNames(options.layout) :
     getCorrectedNames('MainLayout');
   const actions = options.actions ?
     options.actions :
@@ -22,12 +22,14 @@ module.exports = (options) => {
       componentPath,
     } = getPageDetails(optionsForPage);
     return {
-      prefix,
+      prefix: action === 'index' ? '/' : `/${action}`,
+      routeName: `${name.underscoredName}.${action}`,
       page: pageName.pascalCaseName,
       pageFilepath: path.join('../../', componentPath),
     };
   });
   const sectionName = getCorrectedNames(`${name.pascalCaseName}-section`);
+  const prefix = options.prefix ? options.prefix : name.underscoredName;
 
   return {
     filename: `${name.underscoredName}.jsx`,
@@ -36,7 +38,7 @@ module.exports = (options) => {
     templateData: {
       routes,
       sectionName: sectionName.pascalCaseName,
-      prefix: name.underscoredName,
+      prefix: `/${prefix.trim()}`,
       layoutName: layoutName.pascalCaseName,
     },
   };

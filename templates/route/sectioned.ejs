@@ -6,11 +6,11 @@ import <%= layoutName %> from '../../imports/ui/Layouts/<%= layoutName %>.jsx';
 <%_ routes.forEach(function (route) { %>import <%= route.page %> from '<%= route.pageFilepath %>';
 <%_ }); %>
 const <%= sectionName %> = FlowRouter.group({
-  prefix: '/<%= prefix %>',
+  prefix: '<%= prefix %>',
 });
 <% routes.forEach(function (route) { %>
-<%= sectionName %>.route('<%= prefix %>', {
-  name: 'widgets.<%= route.prefix %>',
+<%= sectionName %>.route('<%= route.prefix %>', {
+  name: '<%= route.routeName %>',
   action: (params) => {
     mount(<%= layoutName %>, {
       content: (<<%= route.page %> />)

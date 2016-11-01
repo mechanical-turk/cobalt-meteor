@@ -32,7 +32,6 @@ function getStylesheet(options) {
 }
 
 module.exports = (options, generators) => {
-  console.log(generators);
   return [
     getComponent(options),
     getStylesheet(options),

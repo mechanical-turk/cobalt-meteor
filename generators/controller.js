@@ -12,6 +12,7 @@ module.exports = (options, generate) => {
         argv,
         css,
         action,
+        contained: true,
       });
     })
   );

@@ -1,0 +1,9 @@
+import { Mongo } from 'meteor/mongo';
+import { SimpleSchema } from 'meteor/aldeed:simple-schema';
+
+const <%= pascalCaseName %> = new Mongo.Collection('<%= underscoredName %>');
+<%= pascalCaseName %>.attachSchema(new SimpleSchema({
+
+}));
+
+export default <%= pascalCaseName %>;

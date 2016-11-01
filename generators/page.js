@@ -14,7 +14,9 @@ function getComponent(options) {
   return {
     parent: componentParent,
     filename: componentFileName,
-    templateName: `component.stateful`,
+    templateName: options.contained ?
+      `component.contained` :
+      `component.stateful` ,
     templateData: {
       componentPath,
       pascalCaseName: pageName.pascalCaseName,

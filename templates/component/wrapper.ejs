@@ -5,8 +5,9 @@ import { Blaze } from 'meteor/blaze';
 
 export default class <%= wrapperName %> extends Component {
   componentDidMount() {
-    this.view = Blaze.render(
+    this.view = Blaze.renderWithData(
       Template.<%= wrappedName %>,
+      this.props,
       ReactDOM.findDOMNode(this.refs.<%= ref %>)
     );
   }
